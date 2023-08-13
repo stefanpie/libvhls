@@ -1,0 +1,50 @@
+[project]
+name = "libvhls"
+version = "0.0.1"
+readme = "README.md"
+license = { file = "LICENSE" }
+description = "libvhls is a Python library to interface with the Vitis HLS tool and Vitis HLS projects."
+authors = [
+    { name = "Stefan Abi-Karam", email = "stefanabikaram@gatech.edu" },
+    { name = "Sharc Lab" },
+]
+keywords = [
+    "Vitis HLS",
+    "High-Level Synthesis",
+    "Xilinx",
+    "FPGA",
+    "Electronic Design Automation",
+]
+classifiers = []
+requires-python = ">=3.10"
+
+
+[project.urls]
+"Homepage" = "https://github.com/stefanpie/libvhls"
+"Repository" = "https://github.com/stefanpie/libvhls"
+"Documentation" = "https://github.com/stefanpie/libvhls"
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+
+[tool.isort]
+profile = "black"
+line_length = 88
+multi_line_output = 3
+skip_gitignore = true
+
+
+[tool.black]
+line-length = 88
+preview = true
+
+
+[tool.ruff]
+line-length = 88
