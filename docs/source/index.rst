@@ -10,7 +10,7 @@ Welcome to libvhls's documentation!
    :maxdepth: 3
    :caption: Contents:
    
-   modules
+   api/modules
 
 
 

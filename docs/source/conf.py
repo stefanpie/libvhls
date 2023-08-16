@@ -28,8 +28,3 @@ exclude_patterns = []
 
 html_theme = "furo"
 html_static_path = ["_static"]
-
-# my stuff
-
-apidoc_module_dir = "../../libvhls"
-apidoc_output_dir = "docs/source"

@@ -1,16 +1,16 @@
 libvhls package
 ===============
 
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   libvhls.commands
+
 Submodules
 ----------
-
-libvhls.commands module
------------------------
-
-.. automodule:: libvhls.commands
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 libvhls.dist module
 -------------------
@@ -28,6 +28,14 @@ libvhls.files module
    :undoc-members:
    :show-inheritance:
 
+libvhls.logging\_config module
+------------------------------
+
+.. automodule:: libvhls.logging_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 libvhls.project module
 ----------------------
 
@@ -40,6 +48,14 @@ libvhls.solution module
 -----------------------
 
 .. automodule:: libvhls.solution
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+libvhls.synth\_report module
+----------------------------
+
+.. automodule:: libvhls.synth_report
    :members:
    :undoc-members:
    :show-inheritance:

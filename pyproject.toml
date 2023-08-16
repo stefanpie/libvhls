@@ -21,7 +21,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [project.optional-dependencies]
-docs = ["sphinx", "furo", "sphinx-autodoc-typehints", "sphinxcontrib-apidoc"]
+docs = ["sphinx", "furo", "sphinx-autodoc-typehints"]
 test = ["pytest"]
 
 [project.urls]
