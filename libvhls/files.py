@@ -7,16 +7,31 @@ class FileType(Enum):
     SOURCE = auto()
     HEADER = auto()
     BINARY = auto()
+    CONFIG = auto()
+    IR = auto()
+    OTHER = auto()
 
 
-@dataclass(frozen=True, slots=True)
 class File:
-    path: Path
+    def __init__(self, path: Path, type: FileType | None = None):
+        self.path = path
 
-    @property
-    def type(self):
-        if self.path.suffix.lower() in (".c", ".cpp", ".cc", ".cxx"):
+        if type is None:
+            auto_result = File.auto_type(path)
+            if auto_result is None:
+                raise ValueError(
+                    f"Could not auto detect the file type of {path}. Please specify it"
+                    " manually."
+                )
+            self.type = auto_result
+        else:
+            self.type = type
+
+    @staticmethod
+    def auto_type(fp: Path) -> FileType | None:
+        if fp.suffix.lower() in (".c", ".cpp", ".cc", ".cxx"):
             return FileType.SOURCE
-        if self.path.suffix.lower() in (".h", ".hpp", ".hh", ".hxx"):
+        elif fp.suffix.lower() in (".h", ".hpp", ".hh", ".hxx"):
             return FileType.HEADER
-        return FileType.BINARY
+        else:
+            return None

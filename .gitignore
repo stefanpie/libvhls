@@ -1,8 +1,7 @@
 .vscode/
-
 **/__pycache__/
 .mypy_cache/
 .pytest_cache/
 dist/
 
-docs/build/
+vitis_hls.log
