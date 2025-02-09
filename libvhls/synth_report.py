@@ -1,3 +1,6 @@
+from xml import ElementTree as ET
+
+
 def parse_report(xml_str):
     root = ET.fromstring(xml_str)
 

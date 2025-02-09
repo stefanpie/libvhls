@@ -21,6 +21,7 @@ requires-python = ">=3.13"
 [project.optional-dependencies]
 docs = ["sphinx", "furo", "sphinx-autodoc-typehints"]
 test = ["pytest"]
+dev = ["ruff", "mypy"]
 
 [project.urls]
 "Homepage" = "https://github.com/stefanpie/libvhls"

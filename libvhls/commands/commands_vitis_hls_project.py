@@ -35,7 +35,7 @@ class AddFiles(Command):
         if isinstance(self.src_files, Path):
             c += f" {str(self.src_files)}"
         elif isinstance(self.src_files, Sequence):
-            c += f" \"{' '.join([str(f) for f in self.src_files])}\""
+            c += f' "{" ".join([str(f) for f in self.src_files])}"'
 
         return c
 

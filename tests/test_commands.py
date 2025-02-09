@@ -1,7 +1,5 @@
 from pathlib import Path
 
-from rich.pretty import pprint as pp
-
 from libvhls.commands import ListPart, OpenProject, UserTCL
 from libvhls.logging_config import configure_logging
 from libvhls.vitis_hls import VitisHLS
