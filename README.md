@@ -1,7 +1,5 @@
-<div>
-  <h1 align="center">libvhls</h1>
-  <p align="center">A Python library to interface with the Vitis HLS tool and Vitis HLS projects.</p>
-</div>
+<img src="branding/logo_libvhls.svg" width="100%" alt="libvhls logo">
+<hr>
 
 ## About
 
@@ -19,6 +17,16 @@ In the future, we hope to incorporate more experimental features such as the fol
 
 This project is still under development and highly experimental. As we refine the library, we will provide official documentation and usage examples.
 
+## Installation
+
+```bash
+uv add git+https://github.com/stefanpie/libvhls
+```
+
+```bash
+pip install git+https://github.com/stefanpie/libvhls
+```
+
 ## What's Included
 
 `libvhls` has several components for users to use when building their own tools and projects.
@@ -34,7 +42,7 @@ This project is still under development and highly experimental. As we refine th
   - This includes C++ source files, pragma information, synthesis reports data, intermediated LLVMIR data, extracted scheduling information, extracted binding information, and synthesized HDL.
   - All the data is structured and documented via the library's typed Python API.
 
-# Demos
+<!-- # Demos
 
 ## Design Space Exploration
 
@@ -46,4 +54,4 @@ This project is still under development and highly experimental. As we refine th
 
 ## DFG and CFG Extraction
 
-## HW-SW Co-Design
+## HW-SW Co-Design -->
