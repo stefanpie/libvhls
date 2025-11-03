@@ -16,13 +16,13 @@ keywords = [
     "Electronic Design Automation",
 ]
 classifiers = []
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 
 dependencies = []
 
 [project.optional-dependencies]
 docs = ["sphinx", "furo", "sphinx-autodoc-typehints"]
-test = ["pytest"]
+dev = ["ruff", "mypy", "pytest", "pytest-cov", "types-setuptools"]
 
 [project.urls]
 "Homepage" = "https://github.com/stefanpie/libvhls"
@@ -43,17 +43,19 @@ addopts = ["-s"]
 log_cli = true
 
 
-[tool.isort]
-profile = "black"
-line_length = 88
-multi_line_output = 3
-skip_gitignore = true
-
-
-[tool.black]
-line-length = 88
-preview = true
-
-
 [tool.ruff]
 line-length = 88
+select = ["E", "F", "W", "I", "UP"]
+ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+namespace_packages = true
+explicit_package_bases = true
+packages = ["libvhls", "tests"]

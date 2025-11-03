@@ -5,3 +5,6 @@
 dist/
 
 vitis_hls.log
+
+*.egg-info/
+build/

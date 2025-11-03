@@ -1,0 +1,6 @@
+class HLSLog:
+    def __init__(self):
+        ...
+
+    def lines(self):
+        ...
