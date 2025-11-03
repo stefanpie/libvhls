@@ -55,7 +55,7 @@ class Runner:
             script += "\n"
         return script
 
-    def run(self, commands: Sequence[Command]) -> RunnerResult:
+    def run(self, commands: Sequence[Command], check: bool = False) -> RunnerResult:
         script = self.build_script(commands)
         script_file = tempfile.NamedTemporaryFile(mode="w", suffix=".tcl", delete=False)
         script_fp = Path(script_file.name)
@@ -70,8 +70,7 @@ class Runner:
 
         script_file.close()
 
-        # capture log file
-        log_path = self.wd / "vitis_hls.log"
+        log_path: Path = self.wd / "vitis_hls.log"
         if not log_path.exists():
             raise RuntimeError(f"Log file {log_path} does not exist")
         log_text = log_path.read_text()
@@ -84,5 +83,8 @@ class Runner:
             stderr=s.stderr,
             log=log_text,
         )
+        if check:
+            result.returncode != 0
+            raise RuntimeError(f"Command failed with return code {result.returncode}")
 
         return result

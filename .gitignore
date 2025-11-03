@@ -3,6 +3,7 @@
 .mypy_cache/
 .pytest_cache/
 dist/
+*.egg-info/
 
 vitis_hls.log
 

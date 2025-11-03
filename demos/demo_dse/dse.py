@@ -20,7 +20,8 @@ from libvhls.commands import (
 )
 from libvhls.vitis_hls import VitisHLS
 
-header_tempate = Template(dedent("""
+header_tempate = Template(
+    dedent("""
     #ifndef _BLOCK_MM_H_
     #define _BLOCK_MM_H_
     #include "hls_stream.h"
@@ -40,9 +41,11 @@ header_tempate = Template(dedent("""
     void blockmatmul(hls::stream<blockvec> &Arows, hls::stream<blockvec> &Bcols,
                                     blockmat & ABpartial, DTYPE iteration);
     #endif
-"""))
+""")
+)
 
-source_tempate = Template(dedent("""
+source_tempate = Template(
+    dedent("""
 #include "block_mm.h"
 void blockmatmul(hls::stream<blockvec> &Arows, hls::stream<blockvec> &Bcols,
         blockmat &ABpartial, int it) {
@@ -73,7 +76,8 @@ void blockmatmul(hls::stream<blockvec> &Arows, hls::stream<blockvec> &Bcols,
     }
   }
 }
-"""))
+""")
+)
 
 
 def generate_paramaterized_design(dir: Path, block_size=8) -> list[Path]:
