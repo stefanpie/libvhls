@@ -22,18 +22,14 @@ jobs:
           python-version: "3.12"
           enable-cache: true
 
-      - name: Create Virtual Environment
-        run: |
-          uv venv
-
       - name: Install Dependencies
         run: |
-          uv pip install -U .[docs]
+          uv sync --extra docs
 
       - name: Build Docs
         run: |
-          sphinx-apidoc -d 10 -o ./docs/source/api/ ./libvhls/
-          sphinx-build -b html ./docs/source ./docs/build/
+          uv run sphinx-apidoc -d 10 -o ./docs/source/api/ ./libvhls/
+          uv run sphinx-build -b html ./docs/source ./docs/build/
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
