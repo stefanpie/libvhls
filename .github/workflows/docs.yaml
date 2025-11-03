@@ -22,6 +22,10 @@ jobs:
           python-version: "3.12"
           enable-cache: true
 
+      - name: Create Virtual Environment
+        run: |
+          uv venv
+
       - name: Install Dependencies
         run: |
           uv pip install -U .[docs]
