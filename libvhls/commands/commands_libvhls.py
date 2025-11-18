@@ -31,4 +31,3 @@ class ExexInTCL(Command):
 
 
 COMMANDS_LIBVHLS = [UserTCL, ExexInTCL]
-# __all__ = [cls.__name__ for cls in COMMANDS_LIBVHLS]

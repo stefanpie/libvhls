@@ -22,7 +22,7 @@ dependencies = []
 
 [project.optional-dependencies]
 docs = ["sphinx", "furo", "sphinx-autodoc-typehints"]
-dev = ["ruff", "mypy", "pytest", "pytest-cov", "types-setuptools"]
+dev = ["ruff", "mypy", "pytest", "pytest-cov", "types-setuptools", "rich"]
 
 [project.urls]
 "Homepage" = "https://github.com/stefanpie/libvhls"

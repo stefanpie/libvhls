@@ -1,7 +1,7 @@
 import logging
+from collections.abc import Sequence
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Sequence
 
 from libvhls.commands.commands import Command
 from libvhls.dist import VitisHLSDist
@@ -555,4 +555,3 @@ COMMANDS_VITIS_HLS_PROJECT = [
     SetPart,
     SetTop,
 ]
-# __all__ = [cls.__name__ for cls in COMMANDS_VITIS_HLS_PROJECT]

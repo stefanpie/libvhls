@@ -1,7 +1,7 @@
 import logging
 import shutil
+from collections.abc import Sequence
 from pathlib import Path
-from typing import Sequence
 
 from libvhls.commands.commands import Command, Runner, RunnerResult
 from libvhls.dist import VitisHLSDist

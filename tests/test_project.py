@@ -1,23 +1,22 @@
-from pathlib import Path
 import shutil
+from pathlib import Path
 
 from rich.pretty import pprint as pp
 
 from libvhls.commands import (
+    AddFiles,
+    CreateClock,
+    CsynthDesign,
     ListPart,
     OpenProject,
-    UserTCL,
-    AddFiles,
-    CsynthDesign,
     OpenSolution,
-    CreateClock,
     SetPart,
     SetTop,
+    UserTCL,
 )
 from libvhls.logging_config import configure_logging
-from libvhls.vitis_hls import VitisHLS
 from libvhls.project import Project
-
+from libvhls.vitis_hls import VitisHLS
 from tests.utils import check_command_otuput_generic
 
 configure_logging(True)
@@ -79,12 +78,9 @@ def test_project_csynth(tmp_path):
     commands = [
         OpenProject("test_project"),
         OpenSolution("solution1"),
-        CsynthDesign(
-            dump_cfg=True,
-            dump_post_cfg=True,
-        ),
+        CsynthDesign(),
     ]
 
     r = vhls.run(commands)
     pp(r)
-    # check_command_otuput_generic(tmp_path, r)
+    check_command_otuput_generic(tmp_path, r)

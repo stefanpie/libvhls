@@ -1,6 +1,8 @@
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
-import xml.etree.ElementTree as ET
+
+from libvhls.utils import unwrap
 
 
 @dataclass
@@ -30,7 +32,7 @@ class HLSApp:
 
         files: list[ProjectFiles] = []
         if root.find("files") is not None:
-            for file in root.find("files").findall("file"):
+            for file in unwrap(root.find("files")).findall("file"):
                 files.append(
                     ProjectFiles(
                         name=str(file.get("name")),
@@ -44,7 +46,7 @@ class HLSApp:
 
         solutions = []
         if root.find("solutions") is not None:
-            for solution in root.find("solutions").findall("solution"):
+            for solution in unwrap(root.find("solutions")).findall("solution"):
                 solutions.append(
                     {"name": solution.get("name"), "status": solution.get("status")}
                 )

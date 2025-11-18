@@ -1,9 +1,8 @@
-from xml import ElementTree as ET
-
-
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 from pathlib import Path
-import xml.etree.ElementTree as ET
+
+from libvhls.utils import unwrap
 
 
 @dataclass
@@ -20,15 +19,15 @@ class RTLPort:
 
     @classmethod
     def from_xml_element(cls, xml_element: ET.Element) -> "RTLPort":
-        name = xml_element.find("Name").text
-        object = xml_element.find("Object").text
-        type = xml_element.find("Type").text
-        io_protocol = xml_element.find("IOProtocol").text
-        dir = xml_element.find("Dir").text
-        bits = int(xml_element.find("Bits").text)
-        attribute = xml_element.find("Attribute").text
-        c_type = xml_element.find("CType").text
-        has_ctrl = int(xml_element.find("HasCtrl").text)
+        name = unwrap(unwrap(xml_element.find("Name")).text)
+        object = unwrap(unwrap(xml_element.find("Object")).text)
+        type = unwrap(unwrap(xml_element.find("Type")).text)
+        io_protocol = unwrap(unwrap(xml_element.find("IOProtocol")).text)
+        dir = unwrap(unwrap(xml_element.find("Dir")).text)
+        bits = int(unwrap(unwrap(xml_element.find("Bits")).text))
+        attribute = unwrap(unwrap(xml_element.find("Attribute")).text)
+        c_type = unwrap(unwrap(xml_element.find("CType")).text)
+        has_ctrl = int(unwrap(unwrap(xml_element.find("HasCtrl")).text))
         return cls(
             name=name,
             object=object,
@@ -111,9 +110,9 @@ class TopLevelResourceData:
 
 def parse_latency_str(
     latency_str: str, target_clock_period: float
-) -> tuple[int, float] | None:
+) -> tuple[int, float]:
     if latency_str == "undef":
-        return None
+        raise ValueError("Latency string is 'undef', cannot parse.")
     else:
         cycles = int(latency_str)
         return cycles, cycles * target_clock_period
@@ -124,64 +123,78 @@ def parse_report(xml_str):
 
     # Gather latency data
     target_clock_period = (
-        float(root.find("UserAssignments").find("TargetClockPeriod").text)
+        float(
+            unwrap(
+                unwrap(
+                    unwrap(root.find("UserAssignments")).find("TargetClockPeriod")
+                ).text
+            )
+        )
         / 1_000_000_000
     )
-    performance_estimates = root.find("PerformanceEstimates")
-    summary_of_overall_latency = performance_estimates.find("SummaryOfOverallLatency")
-    latency_data = {}
+    performance_estimates = unwrap(root.find("PerformanceEstimates"))
+    summary_of_overall_latency = unwrap(
+        performance_estimates.find("SummaryOfOverallLatency")
+    )
+    # latency_data: dict[str, int | float] = {}
 
     # fmt: off
-    best_case_latency_str = summary_of_overall_latency.find("Best-caseLatency").text
-    average_case_latency_str = summary_of_overall_latency.find("Average-caseLatency").text
-    worst_case_latency_str = summary_of_overall_latency.find("Worst-caseLatency").text
-    latency_data["best_case_latency"], latency_data["best_case_latency_t"] = parse_latency_str(best_case_latency_str, target_clock_period)
-    latency_data["average_case_latency"], latency_data["average_case_latency_t"] = parse_latency_str(average_case_latency_str, target_clock_period)
-    latency_data["worst_case_latency"], latency_data["worst_case_latency_t"] = parse_latency_str(worst_case_latency_str, target_clock_period)
+    best_case_latency_str = unwrap(unwrap(summary_of_overall_latency.find("Best-caseLatency")).text)
+    average_case_latency_str = unwrap(unwrap(summary_of_overall_latency.find("Average-caseLatency")).text)
+    worst_case_latency_str = unwrap(unwrap(summary_of_overall_latency.find("Worst-caseLatency")).text)
+
+    latency_best_c, latency_best_t = parse_latency_str(best_case_latency_str, target_clock_period)
+    latency_avg_c, latency_avg_t = parse_latency_str(average_case_latency_str, target_clock_period)
+    latency_worst_c, latency_worst_t = parse_latency_str(worst_case_latency_str, target_clock_period)
     # fmt: on
 
     top_level_latency_data = TopLevelLatencyData(
         clock_period=target_clock_period,
-        best_case_latency_c=latency_data["best_case_latency"],
-        average_case_latency_c=latency_data["average_case_latency"],
-        worst_case_latency_c=latency_data["worst_case_latency"],
-        best_case_latency_t=latency_data["best_case_latency_t"],
-        average_case_latency_t=latency_data["average_case_latency_t"],
-        worst_case_latency_t=latency_data["worst_case_latency_t"],
+        best_case_latency_c=latency_best_c,
+        average_case_latency_c=latency_avg_c,
+        worst_case_latency_c=latency_worst_c,
+        best_case_latency_t=latency_best_t,
+        average_case_latency_t=latency_avg_t,
+        worst_case_latency_t=latency_worst_t,
     )
 
     # Gather resource data
-    area_estimates = root.find("AreaEstimates")
-    resource_data = {}
+    area_estimates = unwrap(root.find("AreaEstimates"))
+    resources = unwrap(area_estimates.find("Resources"))
+    available_resources = unwrap(area_estimates.find("AvailableResources"))
+
+    resource_data_abs: dict[str, int] = {}
+    resource_data_avail: dict[str, int] = {}
+    resource_data_percent: dict[str, float] = {}
+
     # fmt: off
-    resource_data["used_abs"] = {}
-    resource_data["used_abs"]["BRAM_18K"] = int( area_estimates.find("Resources").find("BRAM_18K").text )
-    resource_data["used_abs"]["DSP"] = int(area_estimates.find("Resources").find("DSP").text)
-    resource_data["used_abs"]["FF"] = int(area_estimates.find("Resources").find("FF").text)
-    resource_data["used_abs"]["LUT"] = int(area_estimates.find("Resources").find("LUT").text)
-    resource_data["used_abs"]["URAM"] = int( area_estimates.find("Resources").find("URAM").text )
-    resource_data["available_abs"] = {}
-    resource_data["available_abs"]["BRAM_18K"] = int( area_estimates.find("AvailableResources").find("BRAM_18K").text )
-    resource_data["available_abs"]["DSP"] = int( area_estimates.find("AvailableResources").find("DSP").text )
-    resource_data["available_abs"]["FF"] = int( area_estimates.find("AvailableResources").find("FF").text )
-    resource_data["available_abs"]["LUT"] = int( area_estimates.find("AvailableResources").find("LUT").text )
-    resource_data["available_abs"]["URAM"] = int( area_estimates.find("AvailableResources").find("URAM").text )
-    resource_data["used_percent"] = {}
-    resource_data["used_percent"]["BRAM_18K"] = float(resource_data["used_abs"]["BRAM_18K"] / resource_data["available_abs"]["BRAM_18K"])
-    resource_data["used_percent"]["DSP"] = float(resource_data["used_abs"]["DSP"] / resource_data["available_abs"]["DSP"])
-    resource_data["used_percent"]["FF"] = float(resource_data["used_abs"]["FF"] / resource_data["available_abs"]["FF"])
-    resource_data["used_percent"]["LUT"] = float(resource_data["used_abs"]["LUT"] / resource_data["available_abs"]["LUT"])
-    resource_data["used_percent"]["URAM"] = float(resource_data["used_abs"]["URAM"] / resource_data["available_abs"]["URAM"])
+    resource_data_abs["BRAM_18K"] = int( unwrap(unwrap(resources.find("BRAM_18K")).text) )
+    resource_data_abs["DSP"] = int( unwrap(unwrap(resources.find("DSP")).text) )
+    resource_data_abs["FF"] = int( unwrap(unwrap(resources.find("FF")).text) )
+    resource_data_abs["LUT"] = int( unwrap(unwrap(resources.find("LUT")).text) )
+    resource_data_abs["URAM"] = int( unwrap(unwrap(resources.find("URAM")).text) )
+    resource_data_avail["BRAM_18K"] = int( unwrap(unwrap(available_resources.find("BRAM_18K")).text) )
+    resource_data_avail["DSP"] = int( unwrap(unwrap(available_resources.find("DSP")).text) )
+    resource_data_avail["FF"] = int( unwrap(unwrap(available_resources.find("FF")).text) )
+    resource_data_avail["LUT"] = int( unwrap(unwrap(available_resources.find("LUT")).text) )
+    resource_data_avail["URAM"] = int( unwrap(unwrap(available_resources.find("URAM")).text) )
+    resource_data_percent["BRAM_18K"] = float(resource_data_abs["BRAM_18K"] / resource_data_avail["BRAM_18K"])
+    resource_data_percent["DSP"] = float(resource_data_abs["DSP"] / resource_data_avail["DSP"])
+    resource_data_percent["FF"] = float(resource_data_abs["FF"] / resource_data_avail["FF"])
+    resource_data_percent["LUT"] = float(resource_data_abs["LUT"] / resource_data_avail["LUT"])
+    resource_data_percent["URAM"] = float(resource_data_abs["URAM"] / resource_data_avail["URAM"])
     # fmt: on
 
     top_level_resource_data = TopLevelResourceData(
-        used_abs=resource_data["used_abs"],
-        available_abs=resource_data["available_abs"],
-        used_percent=resource_data["used_percent"],
+        used_abs=resource_data_abs,
+        available_abs=resource_data_avail,
+        used_percent=resource_data_percent,
     )
 
     # Gather interface data
-    interface_summary = InterfaceSummary.from_xml_element(root.find("InterfaceSummary"))
+    interface_summary = InterfaceSummary.from_xml_element(
+        unwrap(root.find("InterfaceSummary"))
+    )
 
     return top_level_latency_data, top_level_resource_data, interface_summary
 
