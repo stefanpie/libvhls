@@ -1,0 +1,1137 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#"><link rel="search" title="Search" href="search.html">
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 --><title>Index - libvhls documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">libvhls  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">libvhls  documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">libvhls</a><input aria-label="Toggle navigation of libvhls" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/libvhls.html">libvhls package</a><input aria-label="Toggle navigation of libvhls package" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/libvhls.commands.html">libvhls.commands package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#J"><strong>J</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+</section>
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles">AddFiles (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.all_include_dirs">all_include_dirs (libvhls.dist.VitisHLSDist property)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.argv">argv (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.argv">(libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.attribute">attribute (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.auto_find">auto_find() (libvhls.dist.VitisHLSDist class method)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.vitis_hls.auto_find_vitis_hls">auto_find_vitis_hls() (in module libvhls.vitis_hls)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.File.auto_type">auto_type() (libvhls.files.File static method)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelResourceData.available_abs">available_abs (libvhls.synth_report.TopLevelResourceData attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.average_case_latency_c">average_case_latency_c (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.average_case_latency_t">average_case_latency_t (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.best_case_latency_c">best_case_latency_c (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.best_case_latency_t">best_case_latency_t (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.bin_dir">bin_dir (libvhls.dist.VitisHLSDist property)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.BINARY">BINARY (libvhls.files.FileType attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.bits">bits (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.blackbox">blackbox (libvhls.commands.commands_vitis_hls_project.AddFiles attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.blackbox">(libvhls.project.ProjectFiles attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.board">board (libvhls.commands.commands_vitis_hls_project.ListPart attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.Runner.build_script">build_script() (libvhls.commands.commands.Runner method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.c_type">c_type (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.cflags">cflags (libvhls.commands.commands_vitis_hls_project.AddFiles attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetFiles.cflags">(libvhls.commands.commands_vitis_hls_project.GetFiles attribute)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.cflags">(libvhls.project.ProjectFiles attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimStall.check">check (libvhls.commands.commands_vitis_hls_project.CosimStall attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.clean">clean (libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetClockUncertainty.clock_list">clock_list (libvhls.commands.commands_vitis_hls_project.SetClockUncertainty attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockUncertainty.clock_name">clock_name (libvhls.commands.commands_vitis_hls_project.GetClockUncertainty attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.clock_period">clock_period (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.clock_regions">clock_regions (libvhls.commands.commands_vitis_hls_project.ListPart attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CloseProject">CloseProject (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CloseSolution">CloseSolution (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.Command">Command (class in libvhls.commands.commands)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.commands">commands (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.compiled_library_dir">compiled_library_dir (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.Command.compose">compose() (libvhls.commands.commands.Command method)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.ExexInTCL.compose">(libvhls.commands.commands_libvhls.ExexInTCL method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.UserTCL.compose">(libvhls.commands.commands_libvhls.UserTCL method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.compose">(libvhls.commands.commands_vitis_hls_project.AddFiles method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CloseProject.compose">(libvhls.commands.commands_vitis_hls_project.CloseProject method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CloseSolution.compose">(libvhls.commands.commands_vitis_hls_project.CloseSolution method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.compose">(libvhls.commands.commands_vitis_hls_project.CosimDesign method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimStall.compose">(libvhls.commands.commands_vitis_hls_project.CosimStall method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CreateClock.compose">(libvhls.commands.commands_vitis_hls_project.CreateClock method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.compose">(libvhls.commands.commands_vitis_hls_project.CsimDesign method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsynthDesign.compose">(libvhls.commands.commands_vitis_hls_project.CsynthDesign method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteProject.compose">(libvhls.commands.commands_vitis_hls_project.DeleteProject method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteSolution.compose">(libvhls.commands.commands_vitis_hls_project.DeleteSolution method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.EnableBetaDevice.compose">(libvhls.commands.commands_vitis_hls_project.EnableBetaDevice method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockPeriod.compose">(libvhls.commands.commands_vitis_hls_project.GetClockPeriod method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockUncertainty.compose">(libvhls.commands.commands_vitis_hls_project.GetClockUncertainty method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetFiles.compose">(libvhls.commands.commands_vitis_hls_project.GetFiles method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetPart.compose">(libvhls.commands.commands_vitis_hls_project.GetPart method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetProject.compose">(libvhls.commands.commands_vitis_hls_project.GetProject method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution.compose">(libvhls.commands.commands_vitis_hls_project.GetSolution method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetTop.compose">(libvhls.commands.commands_vitis_hls_project.GetTop method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.Help.compose">(libvhls.commands.commands_vitis_hls_project.Help method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.compose">(libvhls.commands.commands_vitis_hls_project.ListPart method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenProject.compose">(libvhls.commands.commands_vitis_hls_project.OpenProject method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution.compose">(libvhls.commands.commands_vitis_hls_project.OpenSolution method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenTCLProject.compose">(libvhls.commands.commands_vitis_hls_project.OpenTCLProject method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetClockUncertainty.compose">(libvhls.commands.commands_vitis_hls_project.SetClockUncertainty method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetPart.compose">(libvhls.commands.commands_vitis_hls_project.SetPart method)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetTop.compose">(libvhls.commands.commands_vitis_hls_project.SetTop method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.CONFIG">CONFIG (libvhls.files.FileType attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.logging_config.configure_logging">configure_logging() (in module libvhls.logging_config)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign">CosimDesign (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimStall">CosimStall (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.coverage">coverage (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CreateClock">CreateClock (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign">CsimDesign (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.csimflags">csimflags (libvhls.commands.commands_vitis_hls_project.AddFiles attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.csimflags">(libvhls.project.ProjectFiles attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsynthDesign">CsynthDesign (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockPeriod.default">default (libvhls.commands.commands_vitis_hls_project.GetClockPeriod attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteProject">DeleteProject (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteSolution">DeleteSolution (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.description">description (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetPart.device_specification">device_specification (libvhls.commands.commands_vitis_hls_project.SetPart attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.Project.dir">dir (libvhls.project.Project attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.dir">(libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetProject.directory">directory (libvhls.commands.commands_vitis_hls_project.GetProject attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution.directory">(libvhls.commands.commands_vitis_hls_project.GetSolution attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.disable_binary_tv">disable_binary_tv (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.disable_deadlock_detection">disable_deadlock_detection (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.disable_dependency_check">disable_dependency_check (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.display_name">display_name (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsynthDesign.dump_cfg">dump_cfg (libvhls.commands.commands_vitis_hls_project.CsynthDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsynthDesign.dump_post_cfg">dump_post_cfg (libvhls.commands.commands_vitis_hls_project.CsynthDesign attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.enable_dataflow_profiling">enable_dataflow_profiling (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.enable_fifo_sizing">enable_fifo_sizing (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.EnableBetaDevice">EnableBetaDevice (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.ExexInTCL.exec_command">exec_command (libvhls.commands.commands_libvhls.ExexInTCL attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.ExexInTCL">ExexInTCL (class in libvhls.commands.commands_libvhls)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign">ExportDesign (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerStatus.FAIL">FAIL (libvhls.commands.commands.RunnerStatus attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.family">family (libvhls.commands.commands_vitis_hls_project.ListPart attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.File">File (class in libvhls.files)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.HLSApp.files">files (libvhls.project.HLSApp attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType">FileType (class in libvhls.files)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.flow">flow (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution.flow_target">flow_target (libvhls.commands.commands_vitis_hls_project.GetSolution attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution.flow_target">(libvhls.commands.commands_vitis_hls_project.OpenSolution attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.format">format (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.from_bin_path">from_bin_path() (libvhls.dist.VitisHLSDist class method)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.InterfaceSummary.from_xml_element">from_xml_element() (libvhls.synth_report.InterfaceSummary class method)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.from_xml_element">(libvhls.synth_report.RTLPort class method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetFiles.fullpath">fullpath (libvhls.commands.commands_vitis_hls_project.GetFiles attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimStall.generate">generate (libvhls.commands.commands_vitis_hls_project.CosimStall attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockPeriod">GetClockPeriod (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockUncertainty">GetClockUncertainty (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetFiles">GetFiles (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetPart">GetPart (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetProject">GetProject (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution">GetSolution (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetTop">GetTop (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.has_ctrl">has_ctrl (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.HEADER">HEADER (libvhls.files.FileType attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.Help">Help (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.project.Project.hls_app">hls_app (libvhls.project.Project attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.HLSApp">HLSApp (class in libvhls.project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.hwemu_trace_dir">hwemu_trace_dir (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.include_dir">include_dir (libvhls.dist.VitisHLSDist property)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.includes">includes (libvhls.dist.VitisHLSDist property)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.SynthesisReport.interface_summary">interface_summary (libvhls.synth_report.SynthesisReport attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.InterfaceSummary">InterfaceSummary (class in libvhls.synth_report)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.io_protocol">io_protocol (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.ipname">ipname (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.IR">IR (libvhls.files.FileType attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.is_latency_fully_estimated">is_latency_fully_estimated (libvhls.synth_report.TopLevelLatencyData property)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="J" class="genindex-section">
+  <h2>J</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution.json">json (libvhls.commands.commands_vitis_hls_project.GetSolution attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.latency_c">latency_c (libvhls.synth_report.TopLevelLatencyData property)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.latency_t">latency_t (libvhls.synth_report.TopLevelLatencyData property)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.ldflags">ldflags (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.ldflags">(libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.library">library (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li>
+    libvhls
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands.commands
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands.commands_libvhls
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_libvhls">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands.commands_vitis_hls_configuration
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_configuration">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands.commands_vitis_hls_directives
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_directives">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.commands.commands_vitis_hls_project
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_project">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    libvhls.dist
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.dist">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.files
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.files">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.logging_config
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.logging_config">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.project
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.project">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.solution
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.solution">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.synth_report
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.synth_report">module</a>
+</li>
+        </ul></li>
+        <li>
+    libvhls.vitis_hls
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls.vitis_hls">module</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimStall.list">list (libvhls.commands.commands_vitis_hls_project.CosimStall attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart">ListPart (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.log">log (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.Help.lookup_command">lookup_command (libvhls.commands.commands_vitis_hls_project.Help attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.mflags">mflags (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.mflags">(libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        </ul></li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="api/libvhls.html#module-libvhls">libvhls</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands">libvhls.commands</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands">libvhls.commands.commands</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_libvhls">libvhls.commands.commands_libvhls</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_configuration">libvhls.commands.commands_vitis_hls_configuration</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_directives">libvhls.commands.commands_vitis_hls_directives</a>
+</li>
+          <li><a href="api/libvhls.commands.html#module-libvhls.commands.commands_vitis_hls_project">libvhls.commands.commands_vitis_hls_project</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.dist">libvhls.dist</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.files">libvhls.files</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.logging_config">libvhls.logging_config</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.project">libvhls.project</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.solution">libvhls.solution</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.synth_report">libvhls.synth_report</a>
+</li>
+          <li><a href="api/libvhls.html#module-libvhls.vitis_hls">libvhls.vitis_hls</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CreateClock.name">name (libvhls.commands.commands_vitis_hls_project.CreateClock attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockPeriod.name">(libvhls.commands.commands_vitis_hls_project.GetClockPeriod attribute)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetProject.name">(libvhls.commands.commands_vitis_hls_project.GetProject attribute)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetSolution.name">(libvhls.commands.commands_vitis_hls_project.GetSolution attribute)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.name">(libvhls.commands.commands_vitis_hls_project.ListPart attribute)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution.name">(libvhls.commands.commands_vitis_hls_project.OpenSolution attribute)</a>
+</li>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetTop.name">(libvhls.commands.commands_vitis_hls_project.SetTop attribute)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.project.HLSApp.name">(libvhls.project.HLSApp attribute)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.name">(libvhls.project.ProjectFiles attribute)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.solution.Solution.name">(libvhls.solution.Solution property)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.name">(libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetClockPeriod.ns">ns (libvhls.commands.commands_vitis_hls_project.GetClockPeriod attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.O">O (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.O">(libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.object">object (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenProject">OpenProject (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution">OpenSolution (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenTCLProject">OpenTCLProject (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.OTHER">OTHER (libvhls.files.FileType attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.output">output (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.solution.Solution.parse_from_dir">parse_from_dir() (libvhls.solution.Solution class method)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.HLSApp.parse_from_disk">parse_from_disk() (libvhls.project.HLSApp class method)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.project.Project.parse_from_disk">(libvhls.project.Project class method)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.synth_report.SynthesisReport.parse_from_disk">(libvhls.synth_report.SynthesisReport class method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.parse_latency_str">parse_latency_str() (in module libvhls.synth_report)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.parse_report">parse_report() (in module libvhls.synth_report)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.EnableBetaDevice.pattern">pattern (libvhls.commands.commands_vitis_hls_project.EnableBetaDevice attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CreateClock.period">period (libvhls.commands.commands_vitis_hls_project.CreateClock attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.profile">profile (libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.Project">Project (class in libvhls.project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteProject.project_name">project_name (libvhls.commands.commands_vitis_hls_project.DeleteProject attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenProject.project_name">(libvhls.commands.commands_vitis_hls_project.OpenProject attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.project.HLSApp.project_type">project_type (libvhls.project.HLSApp attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.project.ProjectFiles">ProjectFiles (class in libvhls.project)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.random_stall">random_stall (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenProject.reset">reset (libvhls.commands.commands_vitis_hls_project.OpenProject attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution.reset">(libvhls.commands.commands_vitis_hls_project.OpenSolution attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelResourceData.resource_types">resource_types (libvhls.synth_report.TopLevelResourceData property)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.returncode">returncode (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.rtl">rtl (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.rtl">(libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.InterfaceSummary.rtl_ports">rtl_ports (libvhls.synth_report.InterfaceSummary attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort">RTLPort (class in libvhls.synth_report)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.Runner.run">run() (libvhls.commands.commands.Runner method)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.vitis_hls.VitisHLS.run">(libvhls.vitis_hls.VitisHLS method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.Runner">Runner (class in libvhls.commands.commands)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult">RunnerResult (class in libvhls.commands.commands)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerStatus">RunnerStatus (class in libvhls.commands.commands)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.sc">sc (libvhls.project.ProjectFiles attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.script">script (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetClockUncertainty">SetClockUncertainty (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetPart">SetPart (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetTop">SetTop (class in libvhls.commands.commands_vitis_hls_project)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.setup">setup (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsimDesign.setup">(libvhls.commands.commands_vitis_hls_project.CsimDesign attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ListPart.slr_pblocks">slr_pblocks (libvhls.commands.commands_vitis_hls_project.ListPart attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.solution.Solution">Solution (class in libvhls.solution)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.DeleteSolution.solution_name">solution_name (libvhls.commands.commands_vitis_hls_project.DeleteSolution attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetProject.solutions">solutions (libvhls.commands.commands_vitis_hls_project.GetProject attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.html#libvhls.project.HLSApp.solutions">(libvhls.project.HLSApp attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.html#libvhls.files.FileType.SOURCE">SOURCE (libvhls.files.FileType attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.src_files">src_files (libvhls.commands.commands_vitis_hls_project.AddFiles attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.stable_axilite_update">stable_axilite_update (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.status">status (libvhls.commands.commands.RunnerResult property)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.stderr">stderr (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerResult.stdout">stdout (libvhls.commands.commands.RunnerResult attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands.RunnerStatus.SUCCESS">SUCCESS (libvhls.commands.commands.RunnerStatus attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CsynthDesign.synthesis_check">synthesis_check (libvhls.commands.commands_vitis_hls_project.CsynthDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.SynthesisReport">SynthesisReport (class in libvhls.synth_report)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.taxonomy">taxonomy (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.AddFiles.tb">tb (libvhls.commands.commands_vitis_hls_project.AddFiles attribute)</a>
+
+        <ul>
+          <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.GetFiles.tb">(libvhls.commands.commands_vitis_hls_project.GetFiles attribute)</a>
+</li>
+          <li><a href="api/libvhls.html#libvhls.project.ProjectFiles.tb">(libvhls.project.ProjectFiles attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.UserTCL.tcl">tcl (libvhls.commands.commands_libvhls.UserTCL attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenTCLProject.tclfile">tclfile (libvhls.commands.commands_vitis_hls_project.OpenTCLProject attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.project.HLSApp.top">top (libvhls.project.HLSApp attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.SynthesisReport.top_level_latency_data">top_level_latency_data (libvhls.synth_report.SynthesisReport attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.SynthesisReport.top_level_resource_data">top_level_resource_data (libvhls.synth_report.SynthesisReport attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData">TopLevelLatencyData (class in libvhls.synth_report)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelResourceData">TopLevelResourceData (class in libvhls.synth_report)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.trace_level">trace_level (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.RTLPort.type">type (libvhls.synth_report.RTLPort attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.SetClockUncertainty.uncertainty">uncertainty (libvhls.commands.commands_vitis_hls_project.SetClockUncertainty attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenProject.upgrade">upgrade (libvhls.commands.commands_vitis_hls_project.OpenProject attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelResourceData.used_abs">used_abs (libvhls.synth_report.TopLevelResourceData attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelResourceData.used_percent">used_percent (libvhls.synth_report.TopLevelResourceData attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.user_stall">user_stall (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_libvhls.UserTCL">UserTCL (class in libvhls.commands.commands_libvhls)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.OpenSolution.VALID_FLOW_TARGETS">VALID_FLOW_TARGETS (libvhls.commands.commands_vitis_hls_project.OpenSolution attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.VALID_FLOWS">VALID_FLOWS (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.VALID_FORMATS">VALID_FORMATS (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.VALID_RTL">VALID_RTL (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.vendor">vendor (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.ExportDesign.version">version (libvhls.commands.commands_vitis_hls_project.ExportDesign attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist.vitis_hls_bin">vitis_hls_bin (libvhls.dist.VitisHLSDist property)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.vitis_hls.VitisHLS">VitisHLS (class in libvhls.vitis_hls)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.dist.VitisHLSDist">VitisHLSDist (class in libvhls.dist)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.commands.html#libvhls.commands.commands_vitis_hls_project.CosimDesign.wave_debug">wave_debug (libvhls.commands.commands_vitis_hls_project.CosimDesign attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.worst_case_latency_c">worst_case_latency_c (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+        <li><a href="api/libvhls.html#libvhls.synth_report.TopLevelLatencyData.worst_case_latency_t">worst_case_latency_t (libvhls.synth_report.TopLevelLatencyData attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Sharc Lab
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    </body>
+</html>
