@@ -1,6 +1,8 @@
 <img src="branding/logo_libvhls.svg" width="100%" alt="libvhls logo">
 <hr>
 
+🚧 This project is under construction 🏗️, updates to come... 🚧
+
 ## About
 
 `libvhls` is a Python library to interface with the Vitis HLS tool and Vitis HLS projects.
@@ -12,7 +14,10 @@
 In the future, we hope to incorporate more experimental features such as the following:
 
 - Interface to launch and monitor real-time synthesis runs
-- Integration of the LightningSim simulator
+- "Out-of-Context" HLS synthesis for fast prototyping
+- Auto testbench code and data generation from Python
+- Complete support for extracting structured data from things like source code, logs, reports, scheduling data, biniding data, and intermidaite represenations (LLVMIR)
+- Integration with other tools like the LightningSim / OmniSim simulator, DSE tools like FIFOAdvisor and OptDSL+AutoDSE, and QoR models
 - Fine-grained control over synthesis including parallel and incremental synthesis, scheduling, binding, and RTL generation
 
 This project is still under development and highly experimental. As we refine the library, we will provide official documentation and usage examples.
@@ -54,4 +59,6 @@ pip install git+https://github.com/stefanpie/libvhls
 
 ## DFG and CFG Extraction
 
-## HW-SW Co-Design -->
+## HW-SW Co-Design
+
+## LLM Integration -->
